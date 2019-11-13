@@ -1,0 +1,9 @@
+<h1>Task</h1>
+
+<%=  @task['title']  %> : <%= @task['details'] %> => <b><%= @task['completed'] == true ? 'completed' : 'not completed' %></b>
+<br>
+<%= link_to "Editer la tâche", edit_task_path %>
+<%= link_to "Revenir à l'index", root_path %>
+<%= link_to "Delete", task_path(@task),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
